@@ -1,0 +1,28 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		String str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		while(t-->0){
+		    int n=sc.nextInt();
+		    int m=n;
+		    ArrayList<Integer> al=new ArrayList<Integer>();
+		    while(n!=0){
+		        al.add(n%62);
+		        n/=62;
+		    }
+		    for(int i=al.size()-1;i>=0;i--){
+		        System.out.print(str.charAt(al.get(i)));
+		    }
+		    System.out.println("\n"+m);
+		    
+		    
+		}
+	}
+}
